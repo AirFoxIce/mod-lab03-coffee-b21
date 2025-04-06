@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 
-void Automata::Automata(){
+Automata::Automata(){
     cash = 0;
     menu = {"Coffe", "Tea", "Chocolate"};
     prices = {20, 15, 25};
@@ -49,7 +49,7 @@ STATES Automata::getState(){
 void Automata::choice(int index){
     if (states == ACCEPT){
         if (index >= 0 && index < menu.size()){
-            std::cout << "Ваш выбор: " << menu[i] << " - " << prices[i] << ".\n";
+            std::cout << "Ваш выбор: " << menu[index] << " - " << prices[index] << ".\n";
             states = CHECK;
         }
         else{
@@ -62,7 +62,7 @@ void Automata::choice(int index){
 }
 
 bool Automata::check(int index){
-    if (states = CHECK){
+    if (states == CHECK){
         if (cash >= prices[index]){
             return true;
         }
@@ -75,7 +75,7 @@ bool Automata::check(int index){
     return false;
 }
 
-void cancel(){
+void Automata::cancel(){
     if (states = ACCEPT || states == CHECK){
         std::cout << "Операция отменена. Возврат " << cash << "р.\n"
         cash = 0;
