@@ -19,13 +19,14 @@ private:
 
 public:
     // Методы из задания
+    Automata();
     void on();
     void off();
-    void coin();
+    void coin(int value);
     void etMenu();
     STATES getState();
-    void choice();
-    bool check();
+    void choice(int index);
+    bool check(int index);
     void cancel();
     void cook();
     void finish();
