@@ -25,8 +25,8 @@ class Automata {
   void choice(int index);
   bool check(int index);
   void cancel();
-  void cook(int index);     // ← исправлено
-  void finish(int index);   // ← исправлено
+  void cook(int index); 
+  void finish(int index);
 
  private:
   int cash;
