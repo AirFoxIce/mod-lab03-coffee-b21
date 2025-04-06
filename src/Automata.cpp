@@ -24,8 +24,7 @@ void Automata::off() {
   if (states == WAIT) {
     states = OFF;
     std::cout << "Автомат выключен.\n";
-  }
-  else{
+  } else {
     std::cout << "Автомат не выключится из-за актвного сеанса.\n";
   }
 }
