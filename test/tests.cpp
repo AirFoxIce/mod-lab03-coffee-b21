@@ -34,7 +34,7 @@ TEST(AutomataTest, ValidChoiceGoesToCheck) {
     Automata a;
     a.on();
     a.coin(30);
-    a.choice(1); // Coffee
+    a.choice(1);
     EXPECT_EQ(a.getState(), CHECK);
 }
 
@@ -80,6 +80,6 @@ TEST(AutomataTest, CannotOffFromAccept) {
     Automata a;
     a.on();
     a.coin(30);
-    a.off(); // не должен сработать
+    a.off();
     EXPECT_NE(a.getState(), OFF);
 }

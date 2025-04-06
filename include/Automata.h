@@ -25,7 +25,7 @@ class Automata {
   void choice(int index);
   bool check(int index);
   void cancel();
-  void cook(int index); 
+  void cook(int index);
   void finish(int index);
 
  private:
